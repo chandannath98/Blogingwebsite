@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+  #newpost{
+    margin-left: 10%;
+    
+  }
+  #logout{
+    
+    margin-left: 50%;
+  }
+  #ufile{
+    margin-left: 20%;
+    
+  }
+  #ufile button{
+    background-color: rebeccapurple;
+    margin-right: 5px;
+    border: unset;
+    outline: unset;
+   
+    /* padding: 5px; */
+    margin-top: 3px;
+  }
+  #ufile button:hover{
+    
+    background-color: rgb(124, 10, 245);
+  }
+
+  @media only screen and (max-width: 670px) {
+    #logout{
+      margin: 5px;
+      margin-left: 0%;
+    }
+    #newpost{
+    margin-left: 0%;
+    margin: 5px;
+  }
+
+  #ufile{
+    margin-left: 10%;
+    margin-right: 0;
+    
+  }
+  #ufile button{
+    
+   float: none;
+    /* padding: 5px; */
+    margin-top: 3px;
+  }
+
+    
+  }
+  
+</style>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('     {{ url_for('static', filename='img/home-bg.jpg') }}            ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1> Admin Panel</h1>
+            <span class="subheading">Manege your posts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div>
+  <a href="/edit/0"><button type="button" class="btn btn-primary" id="newpost"> Add New Post</button></a>
+  <a href="/logout"><button type="button" class="btn btn-primary" id="logout">Logout</button></a>
+  </div>
+  <hr>
+  <form  id="ufile" method="post" action="/uploder" enctype="multipart/form-data">
+    <h4>Upload File</h4><input type="file" name ="file" placeholder="Upload file">
+  <button type="submit" class="btn btn-primary" id="ufilebtn">Upload</button>
+  </form>
+  <hr>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">sno</th>
+                <th scope="col">title</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+                {% for post in posts %}
+                <tr>
+                
+                <td>{{post.sno}}</td>
+                <td>{{post.title}}</td>
+                <td><a href="/edit/{{post.sno}}"><button type="button" class="btn btn-primary" id="editp">Edit</button></a></td>
+                <td><a href="/delete/{{post.sno}}"><button type="button" class="btn btn-primary" id="deletep">Delete</button></a></td>
+
+                {% endfor %}
+                
+              </tr>
+              
+            </tbody>
+          </table>
+
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}

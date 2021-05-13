@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<style>
+  body{
+    background-color: black;
+  }
+
+    header::before{
+    content: "";
+    background: url('{{ url_for('static', filename='img/login.jpg') }}') no-repeat center center/cover;
+    position: absolute;
+    z-index: -1;
+    top:0px;
+    left:0px;
+    height: 120%;
+    width:100%;
+    opacity: 0.6;
+  }
+.page-heading{
+  /* left: 45%; */
+  position:relative;
+  top:100px;
+  color: white;
+  text-align: center;
+}
+.page-heading h1{
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.page-heading span{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.container{
+  margin-top: 120px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container input{
+  
+  height: 30px;
+  margin-top: 3px;
+  background-color: unset;
+  text-align: center;
+  border: unset;
+  border-bottom: solid white 1px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}
+.container button{
+  color: white;
+  cursor: pointer;
+  margin-left: 40px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: unset;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: unset;
+  border: solid white 1px;
+  padding: 5px;
+  width: 70px;
+  border-spacing: 3px;
+  border-radius: 3px;
+}
+.container button:hover{
+  height: 35px;
+  width: 75px;
+}
+.container input:focus{
+  outline: none;
+}
+
+
+
+</style>
+
+<body>
+  
+</body>
+</html>
+    <!-- Page Header -->
+      <header class="masthead">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Login Page</h1>
+              <span class="subheading">Login</span>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+          <form name="sentMessage" id="contactForm" action = "/dashboard" method="post" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                
+                <label>Username</label>
+                <input type="text" class="form-control" placeholder="Username" id="Username" name='uname' required data-validation-required-message="Please enter your Username.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Password</label>
+                <input type="text" class="form-control" placeholder="Password" id="Password" name="upass" required data-validation-required-message="Please enter your Password.">
+                <p class="help-block text-danger"></p>
+              </div>
+            
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Footer -->
+  
+  </body
+ 
+    
+  </html>
+

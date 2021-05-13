@@ -1,0 +1,18 @@
+{
+    "perams":
+    {
+        
+        "local_uri": "sqlite:///data.db",
+        "prod_uri" : "sqlite:///data.db",
+        "fb_url" : "http://facebook.com",
+        "tw_url" : "http://twiter.com",
+        "gt_url" : "http://github.com",
+        "gmail-id": "chandannathji@gmail.com",
+        "gmail-pass":"ChandanNath",
+        "admin_user": "chandan",
+        "admin_pass": "2426326",
+        "location": "E:\\python\\Python-flask\\clean blog\\static\\Uploded_files",
+        "no_of_posts":"2",
+        "second-post":"452"
+    }
+}

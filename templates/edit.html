@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('     {{ url_for('static', filename='img/home-bg.jpg') }}            ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1> Admin Penal</h1>
+            <span class="subheading">Manege your posts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <a href="/dashboard"><button type="button" class="btn btn-primary" id="dashboard">Back to dashboard</button></a>
+  <hr>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <form name="sentMessage" id="contactForm" action ="/edit/{{sno}}" method="post" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>title</label>
+                <input type="text" class="form-control" placeholder="title" id="title" name='title' required data-validation-required-message="Please enter your name." value="{{post.title}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>subtitle</label>
+                <input type="text" value="{{post.subtitle}}" class="form-control" placeholder="subtitle" id="subtitle" name="subtitle" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>slug</label>
+                <input type="text" class="form-control" placeholder="slug" name="slug" id="slug" required data-validation-required-message="Please enter your phone number." value="{{post.slug}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>content</label>
+                <textarea rows="5" class="form-control" placeholder="content" name = "content" id="content" required data-validation-required-message="Please enter a message.">{{post.content}}</textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}
