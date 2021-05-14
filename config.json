@@ -2,8 +2,8 @@
     "perams":
     {
         
-        "local_uri": "mysql://root:@localhost/codingthunder",
-        "prod_uri" : "mysql://root:@localhost/codingthunder",
+        "local_uri": "mysql://root:@localhost/database",
+        "prod_uri" : "mysql://root:@localhost/database",
         "fb_url" : "http://facebook.com",
         "tw_url" : "http://twiter.com",
         "gt_url" : "http://github.com",
