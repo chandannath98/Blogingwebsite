@@ -22,8 +22,8 @@ app.config.update(
     MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT = '465',
     MAIL_USE_SSL= True,
-    MAIL_USERNAME= "chandannathji@gmail.com",
-    MAIL_PASSWORD= "chandan2426"
+    MAIL_USERNAME= "yourmailid@gmail.com",
+    MAIL_PASSWORD= "password"
 )
 mail=Mail(app)
 local_host = True
