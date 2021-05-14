@@ -213,7 +213,7 @@ def contact():
         email = request.form.get('email')
         phone = request.form.get('phone')
         message = request.form.get('message')
-        mail.send_message("New Message from website", sender=email ,recipients=["chandannathji@gmail.com"],body=f"Name: {name}\nPhone: {phone}\n{message}")
+        mail.send_message("New Message from website", sender=email ,recipients=["yourmail@gmail.com"],body=f"Name: {name}\nPhone: {phone}\n{message}")
         return redirect("/")
     return render_template('contact.html', perams=perams)
 
