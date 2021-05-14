@@ -2,16 +2,16 @@
     "perams":
     {
         
-        "local_uri": "sqlite:///data.db",
-        "prod_uri" : "sqlite:///data.db",
+        "local_uri": "mysql://root:@localhost/codingthunder",
+        "prod_uri" : "mysql://root:@localhost/codingthunder",
         "fb_url" : "http://facebook.com",
         "tw_url" : "http://twiter.com",
         "gt_url" : "http://github.com",
-        "gmail-id": "chandannathji@gmail.com",
-        "gmail-pass":"ChandanNath",
+        "gmail-id": "yourmail@gmail.com",
+        "gmail-pass":"youpass",
         "admin_user": "chandan",
         "admin_pass": "2426326",
-        "location": "E:\\python\\Python-flask\\clean blog\\static\\Uploded_files",
+        "location": "File path",
         "no_of_posts":"2",
         "second-post":"452"
     }

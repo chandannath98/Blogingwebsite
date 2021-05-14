@@ -29,11 +29,11 @@ mail=Mail(app)
 local_host = True
 if(local_host):
     app.config['SQLALCHEMY_DATABASE_URI'] = perams["local_uri"]
-    app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+    
 else:
 
     app.config['SQLALCHEMY_DATABASE_URI'] = perams["prod_uri"]
-    app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+    
 
 db = SQLAlchemy(app)
 
